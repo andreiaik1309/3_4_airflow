@@ -1,0 +1,28 @@
+[2023-10-17 07:52:39,815] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: currency_btc_rub_every_10_munutes.good_morning_task manual__2023-10-17T07:52:38.326627+00:00 [queued]>
+[2023-10-17 07:52:39,829] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: currency_btc_rub_every_10_munutes.good_morning_task manual__2023-10-17T07:52:38.326627+00:00 [queued]>
+[2023-10-17 07:52:39,830] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-10-17 07:52:39,831] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2023-10-17 07:52:39,832] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-10-17 07:52:39,850] {taskinstance.py:1397} INFO - Executing <Task(BashOperator): good_morning_task> on 2023-10-17 07:52:38.326627+00:00
+[2023-10-17 07:52:39,857] {standard_task_runner.py:52} INFO - Started process 708 to run task
+[2023-10-17 07:52:39,862] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'currency_btc_rub_every_10_munutes', 'good_morning_task', 'manual__2023-10-17T07:52:38.326627+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/hello.py', '--cfg-path', '/tmp/tmpmfm_fy5z', '--error-file', '/tmp/tmpsbin68nn']
+[2023-10-17 07:52:39,863] {standard_task_runner.py:80} INFO - Job 44: Subtask good_morning_task
+[2023-10-17 07:52:39,979] {task_command.py:371} INFO - Running <TaskInstance: currency_btc_rub_every_10_munutes.good_morning_task manual__2023-10-17T07:52:38.326627+00:00 [running]> on host 5ae209acedc4
+[2023-10-17 07:52:40,098] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Andrey1309
+AIRFLOW_CTX_DAG_ID=currency_btc_rub_every_10_munutes
+AIRFLOW_CTX_TASK_ID=good_morning_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-10-17T07:52:38.326627+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-10-17T07:52:38.326627+00:00
+[2023-10-17 07:52:40,102] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2023-10-17 07:52:40,104] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'echo "Good morning my diggers!"']
+[2023-10-17 07:52:40,120] {subprocess.py:85} INFO - Output:
+[2023-10-17 07:52:40,122] {subprocess.py:92} INFO - Good morning my diggers!
+[2023-10-17 07:52:40,123] {subprocess.py:96} INFO - Command exited with return code 0
+[2023-10-17 07:52:40,164] {taskinstance.py:1420} INFO - Marking task as SUCCESS. dag_id=currency_btc_rub_every_10_munutes, task_id=good_morning_task, execution_date=20231017T075238, start_date=20231017T075239, end_date=20231017T075240
+[2023-10-17 07:52:40,196] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-10-17 07:52:40,250] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

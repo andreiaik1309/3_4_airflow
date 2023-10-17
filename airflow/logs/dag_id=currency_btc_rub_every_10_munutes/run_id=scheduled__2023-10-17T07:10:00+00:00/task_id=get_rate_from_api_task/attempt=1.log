@@ -1,0 +1,32 @@
+[2023-10-17 07:33:57,769] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: currency_btc_rub_every_10_munutes.get_rate_from_api_task scheduled__2023-10-17T07:10:00+00:00 [queued]>
+[2023-10-17 07:33:57,817] {taskinstance.py:1179} INFO - Dependencies all met for <TaskInstance: currency_btc_rub_every_10_munutes.get_rate_from_api_task scheduled__2023-10-17T07:10:00+00:00 [queued]>
+[2023-10-17 07:33:57,818] {taskinstance.py:1376} INFO - 
+--------------------------------------------------------------------------------
+[2023-10-17 07:33:57,819] {taskinstance.py:1377} INFO - Starting attempt 1 of 2
+[2023-10-17 07:33:57,820] {taskinstance.py:1378} INFO - 
+--------------------------------------------------------------------------------
+[2023-10-17 07:33:57,870] {taskinstance.py:1397} INFO - Executing <Task(PythonOperator): get_rate_from_api_task> on 2023-10-17 07:10:00+00:00
+[2023-10-17 07:33:57,877] {standard_task_runner.py:52} INFO - Started process 80 to run task
+[2023-10-17 07:33:57,893] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'currency_btc_rub_every_10_munutes', 'get_rate_from_api_task', 'scheduled__2023-10-17T07:10:00+00:00', '--job-id', '28', '--raw', '--subdir', 'DAGS_FOLDER/hello.py', '--cfg-path', '/tmp/tmpb7qricmd', '--error-file', '/tmp/tmpjxoxy1vw']
+[2023-10-17 07:33:57,897] {standard_task_runner.py:80} INFO - Job 28: Subtask get_rate_from_api_task
+[2023-10-17 07:33:58,061] {task_command.py:371} INFO - Running <TaskInstance: currency_btc_rub_every_10_munutes.get_rate_from_api_task scheduled__2023-10-17T07:10:00+00:00 [running]> on host 42940a1477e2
+[2023-10-17 07:33:58,333] {taskinstance.py:1591} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Andrey1309
+AIRFLOW_CTX_DAG_ID=currency_btc_rub_every_10_munutes
+AIRFLOW_CTX_TASK_ID=get_rate_from_api_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-10-17T07:10:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-10-17T07:10:00+00:00
+[2023-10-17 07:33:58,339] {taskinstance.py:1909} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 169, in execute
+    self.op_kwargs = self.determine_kwargs(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 180, in determine_kwargs
+    return KeywordParameters.determine(self.python_callable, self.op_args, context).unpacking()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/operator_helpers.py", line 160, in determine
+    raise ValueError(f"The key {name!r} in args is a part of kwargs and therefore reserved.")
+ValueError: The key 'params' in args is a part of kwargs and therefore reserved.
+[2023-10-17 07:33:58,364] {taskinstance.py:1420} INFO - Marking task as UP_FOR_RETRY. dag_id=currency_btc_rub_every_10_munutes, task_id=get_rate_from_api_task, execution_date=20231017T071000, start_date=20231017T073357, end_date=20231017T073358
+[2023-10-17 07:33:58,387] {standard_task_runner.py:97} ERROR - Failed to execute job 28 for task get_rate_from_api_task (The key 'params' in args is a part of kwargs and therefore reserved.; 80)
+[2023-10-17 07:33:58,436] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-10-17 07:33:58,518] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
